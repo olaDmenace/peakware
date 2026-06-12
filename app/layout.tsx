@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Providers } from "@/components/providers";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -38,7 +41,11 @@ export default function RootLayout({
       className={`${instrumentSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-ink text-cream">
-        {children}
+        <Providers>
+          <Header />
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
