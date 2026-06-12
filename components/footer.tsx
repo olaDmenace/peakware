@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { nav, site } from "@/content/site";
+import { contact, nav, site } from "@/content/site";
 import { services } from "@/content/services";
 
 export function Footer() {
   return (
     <footer className="border-t keyline bg-surface">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
         <div>
           <p className="font-semibold tracking-tight text-lg">
             Peakware<span className="text-accent">.</span>
@@ -47,6 +47,36 @@ export function Footer() {
               </li>
             ))}
           </ul>
+        </div>
+        <div>
+          <p className="font-mono text-xs uppercase tracking-widest text-faint">
+            Get in touch
+          </p>
+          <ul className="mt-4 space-y-2">
+            <li>
+              <a
+                href={`mailto:${contact.email}`}
+                className="text-sm text-muted transition-colors hover:text-cream"
+              >
+                {contact.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={contact.phoneHref}
+                className="text-sm text-muted transition-colors hover:text-cream"
+              >
+                {contact.phone}
+              </a>
+            </li>
+          </ul>
+          <address className="mt-4 text-sm leading-relaxed text-muted not-italic">
+            {contact.address.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
+          </address>
         </div>
       </div>
       <div className="border-t keyline">

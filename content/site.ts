@@ -10,6 +10,18 @@ export const site = {
   footerTagline: "Peakware Consulting — technology that earns its place.",
 };
 
+export const contact = {
+  email: "info@peakwareconsulting.co.uk",
+  phone: "+44 7785 602827",
+  phoneHref: "tel:+447785602827",
+  address: [
+    "C/O Aacsl Accountant Limited",
+    "1st Floor North Westgate House",
+    "Harlow, Essex",
+    "United Kingdom, CM20 1YS",
+  ],
+};
+
 export const nav = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },

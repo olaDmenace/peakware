@@ -1,0 +1,221 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Peakware." [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e5]:
+        - link "Services" [ref=e6] [cursor=pointer]:
+          - /url: /services
+        - link "About" [ref=e7] [cursor=pointer]:
+          - /url: /about
+        - link "Industries" [ref=e8] [cursor=pointer]:
+          - /url: /industries
+        - link "Contact" [ref=e9] [cursor=pointer]:
+          - /url: /contact
+        - link "Book a discovery call" [ref=e10] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e12]:
+    - generic [ref=e18]:
+      - paragraph [ref=e19]: UK technology consultancy
+      - heading "Technology that earns its place in your business." [level=1] [ref=e20]:
+        - generic [ref=e21]: Technology
+        - generic [ref=e22]: that
+        - generic [ref=e23]: earns
+        - generic [ref=e24]: its
+        - generic [ref=e25]: place
+        - generic [ref=e26]: in
+        - generic [ref=e27]: your
+        - generic [ref=e28]: business.
+      - paragraph [ref=e29]: Peakware is a UK technology consultancy. We design, build and secure the cloud, data and AI systems that move organisations forward — and we stay long enough to make sure they actually work.
+      - generic [ref=e30]:
+        - link "Book a discovery call" [ref=e31] [cursor=pointer]:
+          - /url: /contact
+        - link "Explore our services" [ref=e32] [cursor=pointer]:
+          - /url: /services
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - paragraph [ref=e35]: The way we work
+        - heading "Most technology problems aren't really technology problems." [level=2] [ref=e36]
+      - generic [ref=e37]:
+        - paragraph [ref=e39]: Most technology problems aren't really technology problems. They're decisions made without enough context, systems bolted together under deadline, and roadmaps that drift from what the business needs.
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: We work the other way round. We start with the outcome you're after, then engineer the shortest credible path to it — across cloud, data, infrastructure, AI and security. No oversized programmes, no vendor theatre, no jargon used to hide a thin answer.
+          - paragraph [ref=e42]: You get senior people who've done the work, clear recommendations you can act on, and systems built to be maintained by your team long after we've gone.
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - paragraph [ref=e46]: Services
+        - heading "Eight disciplines, one roof." [level=2] [ref=e47]
+        - paragraph [ref=e48]: Cloud, data, AI, software and security that actually fit together — instead of fighting each other.
+      - generic [ref=e49]:
+        - link "01 / Cloud & Data Management Your cloud spend and your data are usually your two largest, least-understood assets. We bring both under control. Explore →" [ref=e51] [cursor=pointer]:
+          - /url: /services/cloud-data-management
+          - paragraph [ref=e52]: 01 /
+          - heading "Cloud & Data Management" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Your cloud spend and your data are usually your two largest, least-understood assets. We bring both under control.
+          - paragraph [ref=e55]: Explore →
+        - link "02 / Infrastructure & Virtualization The unglamorous layer that everything else depends on. When it's right, nobody notices. When it's wrong, everyone does. Explore →" [ref=e57] [cursor=pointer]:
+          - /url: /services/infrastructure-virtualization
+          - paragraph [ref=e58]: 02 /
+          - heading "Infrastructure & Virtualization" [level=3] [ref=e59]
+          - paragraph [ref=e60]: The unglamorous layer that everything else depends on. When it's right, nobody notices. When it's wrong, everyone does.
+          - paragraph [ref=e61]: Explore →
+        - link "03 / Agentic AI AI that does the work, not just talks about it. Agentic systems can plan, use tools, call your APIs and complete multi-step tasks — but only when they're built with real guardrails. Explore →" [ref=e63] [cursor=pointer]:
+          - /url: /services/agentic-ai
+          - paragraph [ref=e64]: 03 /
+          - heading "Agentic AI" [level=3] [ref=e65]
+          - paragraph [ref=e66]: AI that does the work, not just talks about it. Agentic systems can plan, use tools, call your APIs and complete multi-step tasks — but only when they're built with real guardrails.
+          - paragraph [ref=e67]: Explore →
+        - link "04 / Machine Learning Models are easy to build and hard to operate. We focus on the ones that survive contact with production. Explore →" [ref=e69] [cursor=pointer]:
+          - /url: /services/machine-learning
+          - paragraph [ref=e70]: 04 /
+          - heading "Machine Learning" [level=3] [ref=e71]
+          - paragraph [ref=e72]: Models are easy to build and hard to operate. We focus on the ones that survive contact with production.
+          - paragraph [ref=e73]: Explore →
+        - link "05 / Custom Software Development Off-the-shelf software fits the average company. It rarely fits yours. Explore →" [ref=e75] [cursor=pointer]:
+          - /url: /services/custom-software-development
+          - paragraph [ref=e76]: 05 /
+          - heading "Custom Software Development" [level=3] [ref=e77]
+          - paragraph [ref=e78]: Off-the-shelf software fits the average company. It rarely fits yours.
+          - paragraph [ref=e79]: Explore →
+        - link "06 / Cybersecurity Security isn't a product you buy — it's a posture you maintain. We help you build one that matches your actual risk, not someone else's checklist. Explore →" [ref=e81] [cursor=pointer]:
+          - /url: /services/cybersecurity
+          - paragraph [ref=e82]: 06 /
+          - heading "Cybersecurity" [level=3] [ref=e83]
+          - paragraph [ref=e84]: Security isn't a product you buy — it's a posture you maintain. We help you build one that matches your actual risk, not someone else's checklist.
+          - paragraph [ref=e85]: Explore →
+        - link "07 / Analytics Dashboards everywhere, decisions nowhere. The problem is rarely a shortage of data — it's a shortage of clarity. Explore →" [ref=e87] [cursor=pointer]:
+          - /url: /services/analytics
+          - paragraph [ref=e88]: 07 /
+          - heading "Analytics" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Dashboards everywhere, decisions nowhere. The problem is rarely a shortage of data — it's a shortage of clarity.
+          - paragraph [ref=e91]: Explore →
+        - link "08 / Training & Enablement The best system in the world is worthless if your team can't run it. We make sure they can. Explore →" [ref=e93] [cursor=pointer]:
+          - /url: /services/training-enablement
+          - paragraph [ref=e94]: 08 /
+          - heading "Training & Enablement" [level=3] [ref=e95]
+          - paragraph [ref=e96]: The best system in the world is worthless if your team can't run it. We make sure they can.
+          - paragraph [ref=e97]: Explore →
+    - generic [ref=e98]:
+      - generic [ref=e99]:
+        - paragraph [ref=e100]: Why Peakware
+        - heading "Built on straight answers." [level=2] [ref=e101]
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - paragraph [ref=e104]: "01"
+          - heading "Senior people, not a sales pipeline" [level=3] [ref=e105]
+          - paragraph [ref=e106]: The people who scope your work are the people who do it. You won't be sold by an expert and delivered by a junior.
+        - generic [ref=e107]:
+          - paragraph [ref=e108]: "02"
+          - heading "We commit to the outcome" [level=3] [ref=e109]
+          - paragraph [ref=e110]: We're judged on whether the system works and the business moves — not on hours billed or slides produced.
+        - generic [ref=e111]:
+          - paragraph [ref=e112]: "03"
+          - heading "Built to be handed over" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Everything we deliver is documented, maintainable and owned by your team. No dependency you didn't ask for.
+        - generic [ref=e115]:
+          - paragraph [ref=e116]: "04"
+          - heading "Straight answers" [level=3] [ref=e117]
+          - paragraph [ref=e118]: If something's a bad idea, you'll hear it from us early — when it's cheap to change — not after it's built.
+        - generic [ref=e119]:
+          - paragraph [ref=e120]: "05"
+          - heading "Genuinely cross-disciplinary" [level=3] [ref=e121]
+          - paragraph [ref=e122]: Cloud, data, AI, software and security under one roof, so the pieces actually fit together instead of fighting each other.
+    - generic [ref=e124]:
+      - generic [ref=e125]:
+        - paragraph [ref=e126]: How we work
+        - heading "From discovery to handover — no black boxes." [level=2] [ref=e127]
+      - generic [ref=e128]:
+        - generic [ref=e129]:
+          - generic [ref=e131]: "1"
+          - heading "Discover" [level=3] [ref=e133]
+          - paragraph [ref=e134]: We get into the detail of what you're trying to achieve and where the real constraints are. No assumptions, no boilerplate proposal.
+        - generic [ref=e135]:
+          - generic [ref=e137]: "2"
+          - heading "Design" [level=3] [ref=e139]
+          - paragraph [ref=e140]: We map the shortest credible path to the outcome, with the trade-offs laid out plainly so you can make the call.
+        - generic [ref=e141]:
+          - generic [ref=e143]: "3"
+          - heading "Build" [level=3] [ref=e145]
+          - paragraph [ref=e146]: We deliver in focused increments you can see and use, not a six-month black box.
+        - generic [ref=e147]:
+          - generic [ref=e149]: "4"
+          - heading "Hand over" [level=3] [ref=e151]
+          - paragraph [ref=e152]: We document, train and transfer ownership so your team can run and extend what we've built.
+        - generic [ref=e153]:
+          - generic [ref=e155]: "5"
+          - heading "Support" [level=3] [ref=e157]
+          - paragraph [ref=e158]: We stay available for the things that come up after launch, on terms that suit you.
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - paragraph [ref=e161]: Industries
+        - heading "Depth where it matters." [level=2] [ref=e162]
+        - paragraph [ref=e163]: "We work across sectors, with particular depth in:"
+      - generic [ref=e164]:
+        - link "Financial services & fintech" [ref=e166] [cursor=pointer]:
+          - /url: /industries
+        - link "Healthcare & life sciences" [ref=e168] [cursor=pointer]:
+          - /url: /industries
+        - link "Retail & e-commerce" [ref=e170] [cursor=pointer]:
+          - /url: /industries
+        - link "Professional services" [ref=e172] [cursor=pointer]:
+          - /url: /industries
+        - link "Startups & scale-ups" [ref=e174] [cursor=pointer]:
+          - /url: /industries
+    - generic [ref=e179]:
+      - heading "Let's talk about the actual problem." [level=2] [ref=e180]
+      - paragraph [ref=e181]: Tell us what you're trying to build, fix or secure. We'll give you a straight assessment of what it takes — no obligation, no sales script.
+      - link "Book a discovery call" [ref=e182] [cursor=pointer]:
+        - /url: /contact
+  - contentinfo [ref=e183]:
+    - generic [ref=e184]:
+      - generic [ref=e185]:
+        - paragraph [ref=e186]: Peakware.
+        - paragraph [ref=e187]: UK technology consultancy for cloud, data, AI, software and security — built to work and built to last.
+      - generic [ref=e188]:
+        - paragraph [ref=e189]: Services
+        - list [ref=e190]:
+          - listitem [ref=e191]:
+            - link "Cloud & Data" [ref=e192] [cursor=pointer]:
+              - /url: /services/cloud-data-management
+          - listitem [ref=e193]:
+            - link "Infrastructure" [ref=e194] [cursor=pointer]:
+              - /url: /services/infrastructure-virtualization
+          - listitem [ref=e195]:
+            - link "Agentic AI" [ref=e196] [cursor=pointer]:
+              - /url: /services/agentic-ai
+          - listitem [ref=e197]:
+            - link "Machine Learning" [ref=e198] [cursor=pointer]:
+              - /url: /services/machine-learning
+          - listitem [ref=e199]:
+            - link "Software" [ref=e200] [cursor=pointer]:
+              - /url: /services/custom-software-development
+          - listitem [ref=e201]:
+            - link "Cybersecurity" [ref=e202] [cursor=pointer]:
+              - /url: /services/cybersecurity
+          - listitem [ref=e203]:
+            - link "Analytics" [ref=e204] [cursor=pointer]:
+              - /url: /services/analytics
+          - listitem [ref=e205]:
+            - link "Training" [ref=e206] [cursor=pointer]:
+              - /url: /services/training-enablement
+      - generic [ref=e207]:
+        - paragraph [ref=e208]: Company
+        - list [ref=e209]:
+          - listitem [ref=e210]:
+            - link "Home" [ref=e211] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e212]:
+            - link "Services" [ref=e213] [cursor=pointer]:
+              - /url: /services
+          - listitem [ref=e214]:
+            - link "About" [ref=e215] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e216]:
+            - link "Industries" [ref=e217] [cursor=pointer]:
+              - /url: /industries
+          - listitem [ref=e218]:
+            - link "Contact" [ref=e219] [cursor=pointer]:
+              - /url: /contact
+    - paragraph [ref=e221]: Peakware Consulting — technology that earns its place.
+  - button "Open Next.js Dev Tools" [ref=e227] [cursor=pointer]:
+    - img [ref=e228]
