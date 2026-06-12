@@ -94,26 +94,31 @@ export const howWeWork = [
 export const industries = [
   {
     name: "Financial services & fintech",
+    icon: "lni-bar-chart-dollar",
     blurb:
       "Systems where accuracy, auditability and uptime aren't negotiable — from data platforms to secure cloud foundations.",
   },
   {
     name: "Healthcare & life sciences",
+    icon: "lni-hospital-2",
     blurb:
       "Compliant data handling and dependable infrastructure for organisations where the stakes are higher than dashboards.",
   },
   {
     name: "Retail & e-commerce",
+    icon: "lni-cart-2",
     blurb:
       "The analytics, integrations and platforms that turn transaction volume into decisions and margin.",
   },
   {
     name: "Professional services",
+    icon: "lni-briefcase-1",
     blurb:
       "Internal tooling, automation and reporting that free senior people from work a system should be doing.",
   },
   {
     name: "Startups & scale-ups",
+    icon: "lni-rocket-5",
     blurb:
       "First serious infrastructure, built right the first time — so growth doesn't mean a rebuild.",
   },

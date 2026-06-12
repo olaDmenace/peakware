@@ -5,6 +5,7 @@ export type Service = {
   navName: string; // shorter label for nav/footer
   tagline: string; // the hook line
   image: string; // hero background
+  icon: string; // lineicons class
   narrative: string[]; // body paragraphs
   deliverables: string[];
 };
@@ -13,6 +14,7 @@ export const services: Service[] = [
   {
     slug: "cloud-data-management",
     image: "/images/servers.jpg",
+    icon: "lni-cloud-2",
     number: "01",
     name: "Cloud & Data Management",
     navName: "Cloud & Data",
@@ -32,6 +34,7 @@ export const services: Service[] = [
   {
     slug: "infrastructure-virtualization",
     image: "/images/servers.jpg",
+    icon: "lni-layers-1",
     number: "02",
     name: "Infrastructure & Virtualization",
     navName: "Infrastructure",
@@ -50,7 +53,8 @@ export const services: Service[] = [
   },
   {
     slug: "agentic-ai",
-    image: "/images/circuit.jpg",
+    image: "/images/schematic.jpg",
+    icon: "lni-gears-3",
     number: "03",
     name: "Agentic AI",
     navName: "Agentic AI",
@@ -70,6 +74,7 @@ export const services: Service[] = [
   {
     slug: "machine-learning",
     image: "/images/circuit.jpg",
+    icon: "lni-trend-up-1",
     number: "04",
     name: "Machine Learning",
     navName: "Machine Learning",
@@ -88,7 +93,8 @@ export const services: Service[] = [
   },
   {
     slug: "custom-software-development",
-    image: "/images/circuit.jpg",
+    image: "/images/code.jpg",
+    icon: "lni-monitor-code",
     number: "05",
     name: "Custom Software Development",
     navName: "Software",
@@ -107,7 +113,8 @@ export const services: Service[] = [
   },
   {
     slug: "cybersecurity",
-    image: "/images/servers.jpg",
+    image: "/images/schematic.jpg",
+    icon: "lni-shield-2",
     number: "06",
     name: "Cybersecurity",
     navName: "Cybersecurity",
@@ -128,6 +135,7 @@ export const services: Service[] = [
   {
     slug: "analytics",
     image: "/images/earth.jpg",
+    icon: "lni-pie-chart-2",
     number: "07",
     name: "Analytics",
     navName: "Analytics",
@@ -146,7 +154,8 @@ export const services: Service[] = [
   },
   {
     slug: "training-enablement",
-    image: "/images/team.jpg",
+    image: "/images/desk-code.jpg",
+    icon: "lni-graduation-cap-1",
     number: "08",
     name: "Training & Enablement",
     navName: "Training",

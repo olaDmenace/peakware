@@ -62,7 +62,7 @@ export default async function ServicePage(props: Props) {
               {service.deliverables.map((item) => (
                 <StaggerItem
                   key={item}
-                  className="flex gap-3 rounded-xl border keyline bg-surface p-4"
+                  className="flex gap-3 rounded-xl border border-line/60 p-4"
                 >
                   <span className="mt-0.5 text-accent" aria-hidden>
                     ▪

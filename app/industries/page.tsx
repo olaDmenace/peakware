@@ -22,14 +22,14 @@ export default function IndustriesPage() {
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
         <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((ind, i) => (
-            <StaggerItem
-              key={ind.name}
-              className="rounded-2xl border keyline bg-surface p-7"
-            >
-              <p className="font-mono text-xs text-accent">
-                {String(i + 1).padStart(2, "0")}
-              </p>
-              <h2 className="mt-4 text-lg font-semibold tracking-tight">
+            <StaggerItem key={ind.name} className="card p-7">
+              <div className="flex items-center justify-between">
+                <span className={`lni ${ind.icon} card-icon`} aria-hidden />
+                <p className="font-mono text-xs text-faint">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+              </div>
+              <h2 className="mt-5 text-lg font-semibold tracking-tight">
                 {ind.name}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted">

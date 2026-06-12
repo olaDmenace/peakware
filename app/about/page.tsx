@@ -18,7 +18,7 @@ export default function AboutPage() {
         eyebrow="About"
         title="Senior people. Straight answers. Systems that last."
         intro={valueProp[0]}
-        image="/images/team.jpg"
+        image="/images/desk-code.jpg"
       />
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sora, Inter, Geist_Mono } from "next/font/google";
+import "./lineicons.css";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Header } from "@/components/header";

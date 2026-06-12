@@ -23,12 +23,12 @@ export function Hero() {
     >
       <motion.div style={{ y: imageY }} className="absolute inset-0" aria-hidden>
         <Image
-          src="/images/hero-peak.jpg"
+          src="/images/hero-laptop.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_30%]"
+          className="object-cover"
         />
       </motion.div>
       <div
