@@ -27,7 +27,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="font-semibold tracking-tight text-lg">
+        <Link href="/" className="font-display font-semibold tracking-tight text-lg">
           Peakware<span className="text-accent">.</span>
         </Link>
 
@@ -46,10 +46,7 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="rounded-full bg-accent px-4 py-2 text-sm font-medium text-ink transition-colors hover:bg-accent-bright"
-          >
+          <Link href="/contact" className="btn btn-primary px-4 py-2 text-sm">
             Book a discovery call
           </Link>
         </nav>
@@ -93,7 +90,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 rounded-full bg-accent px-4 py-3 text-center font-medium text-ink"
+                className="btn btn-primary mt-2 px-4 py-3"
               >
                 Book a discovery call
               </Link>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ctaBand } from "@/content/site";
 import { Reveal } from "@/components/motion/reveal";
@@ -5,9 +6,17 @@ import { Reveal } from "@/components/motion/reveal";
 export function CtaBand() {
   return (
     <section className="relative overflow-hidden border-t keyline">
-      <div className="bg-grid absolute inset-0 opacity-40" aria-hidden />
+      <Image
+        src="/images/earth.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+        aria-hidden
+      />
+      <div className="absolute inset-0 bg-ink/70" aria-hidden />
       <div
-        className="absolute -top-1/2 left-1/2 h-[32rem] w-[48rem] -translate-x-1/2 rounded-full bg-navy/30 blur-[120px]"
+        className="absolute inset-0 bg-gradient-to-b from-ink via-transparent to-ink"
         aria-hidden
       />
       <div className="relative mx-auto max-w-6xl px-5 py-24 text-center sm:px-8 sm:py-32">
@@ -20,7 +29,7 @@ export function CtaBand() {
           </p>
           <Link
             href={ctaBand.cta.href}
-            className="mt-10 inline-block rounded-full bg-accent px-7 py-3.5 font-medium text-ink transition-colors hover:bg-accent-bright"
+            className="btn btn-primary mt-10 px-7 py-3.5"
           >
             {ctaBand.cta.label}
           </Link>

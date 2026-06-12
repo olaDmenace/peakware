@@ -18,6 +18,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Eight disciplines, one roof."
         intro="Cloud, data, AI, software and security that actually fit together — instead of fighting each other."
+        image="/images/servers.jpg"
       />
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
         <div className="divide-y divide-line border-y keyline">

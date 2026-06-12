@@ -17,6 +17,7 @@ export default function IndustriesPage() {
         eyebrow="Industries"
         title="Depth where it matters."
         intro="We work across sectors, with particular depth in the ones below."
+        image="/images/earth.jpg"
       />
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
         <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

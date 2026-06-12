@@ -4,6 +4,7 @@ export type Service = {
   name: string;
   navName: string; // shorter label for nav/footer
   tagline: string; // the hook line
+  image: string; // hero background
   narrative: string[]; // body paragraphs
   deliverables: string[];
 };
@@ -11,6 +12,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "cloud-data-management",
+    image: "/images/servers.jpg",
     number: "01",
     name: "Cloud & Data Management",
     navName: "Cloud & Data",
@@ -29,6 +31,7 @@ export const services: Service[] = [
   },
   {
     slug: "infrastructure-virtualization",
+    image: "/images/servers.jpg",
     number: "02",
     name: "Infrastructure & Virtualization",
     navName: "Infrastructure",
@@ -47,6 +50,7 @@ export const services: Service[] = [
   },
   {
     slug: "agentic-ai",
+    image: "/images/circuit.jpg",
     number: "03",
     name: "Agentic AI",
     navName: "Agentic AI",
@@ -65,6 +69,7 @@ export const services: Service[] = [
   },
   {
     slug: "machine-learning",
+    image: "/images/circuit.jpg",
     number: "04",
     name: "Machine Learning",
     navName: "Machine Learning",
@@ -83,6 +88,7 @@ export const services: Service[] = [
   },
   {
     slug: "custom-software-development",
+    image: "/images/circuit.jpg",
     number: "05",
     name: "Custom Software Development",
     navName: "Software",
@@ -101,6 +107,7 @@ export const services: Service[] = [
   },
   {
     slug: "cybersecurity",
+    image: "/images/servers.jpg",
     number: "06",
     name: "Cybersecurity",
     navName: "Cybersecurity",
@@ -120,6 +127,7 @@ export const services: Service[] = [
   },
   {
     slug: "analytics",
+    image: "/images/earth.jpg",
     number: "07",
     name: "Analytics",
     navName: "Analytics",
@@ -138,6 +146,7 @@ export const services: Service[] = [
   },
   {
     slug: "training-enablement",
+    image: "/images/team.jpg",
     number: "08",
     name: "Training & Enablement",
     navName: "Training",

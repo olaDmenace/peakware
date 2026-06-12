@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
@@ -13,28 +14,32 @@ export function Hero() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const glowY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
 
   return (
     <section
       ref={ref}
       className="relative flex min-h-svh items-center overflow-hidden"
     >
-      <div className="bg-grid absolute inset-0 opacity-50" aria-hidden />
+      <motion.div style={{ y: imageY }} className="absolute inset-0" aria-hidden>
+        <Image
+          src="/images/hero-peak.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_30%]"
+        />
+      </motion.div>
       <div
-        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/70 to-ink/25"
         aria-hidden
       />
-      <motion.div
-        style={{ y: glowY }}
-        className="absolute -top-32 right-[-10%] h-[36rem] w-[36rem] rounded-full bg-navy/35 blur-[140px]"
+      <div
+        className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-ink to-transparent"
         aria-hidden
       />
-      <motion.div
-        style={{ y: glowY }}
-        className="absolute bottom-[-20%] left-[-10%] h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-[120px]"
-        aria-hidden
-      />
+      <div className="bg-grid absolute inset-0 opacity-25" aria-hidden />
 
       <div className="relative mx-auto w-full max-w-6xl px-5 pt-28 pb-20 sm:px-8">
         <motion.p
@@ -74,13 +79,13 @@ export function Hero() {
         >
           <Link
             href={hero.primaryCta.href}
-            className="rounded-full bg-accent px-7 py-3.5 font-medium text-ink transition-colors hover:bg-accent-bright"
+            className="btn btn-primary px-7 py-3.5"
           >
             {hero.primaryCta.label}
           </Link>
           <Link
             href={hero.secondaryCta.href}
-            className="rounded-full border keyline px-7 py-3.5 font-medium text-cream transition-colors hover:border-accent hover:text-accent"
+            className="btn btn-ghost px-7 py-3.5"
           >
             {hero.secondaryCta.label}
           </Link>

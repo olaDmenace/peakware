@@ -17,6 +17,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title={ctaBand.headline}
         intro={ctaBand.body}
+        image="/images/hero-peak.jpg"
       />
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
         <div className="grid gap-14 lg:grid-cols-[1fr_20rem]">

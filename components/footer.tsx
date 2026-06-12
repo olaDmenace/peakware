@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t keyline bg-surface">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
         <div>
-          <p className="font-semibold tracking-tight text-lg">
+          <p className="font-display font-semibold tracking-tight text-lg">
             Peakware<span className="text-accent">.</span>
           </p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">

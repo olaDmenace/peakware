@@ -34,6 +34,7 @@ export default async function ServicePage(props: Props) {
         eyebrow={`Service ${service.number} / 08`}
         title={service.name}
         intro={service.tagline}
+        image={service.image}
       />
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">

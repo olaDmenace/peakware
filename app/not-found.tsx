@@ -13,10 +13,7 @@ export default function NotFound() {
         The link may be out of date. Everything we do is reachable from the
         homepage.
       </p>
-      <Link
-        href="/"
-        className="mt-8 rounded-full bg-accent px-7 py-3.5 font-medium text-ink transition-colors hover:bg-accent-bright"
-      >
+      <Link href="/" className="btn btn-primary mt-8 px-7 py-3.5">
         Back to home
       </Link>
     </main>
