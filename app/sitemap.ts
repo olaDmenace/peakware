@@ -3,7 +3,14 @@ import { services } from "@/content/services";
 import { site } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/services", "/about", "/industries", "/contact"];
+  const staticRoutes = [
+    "",
+    "/services",
+    "/courses",
+    "/about",
+    "/industries",
+    "/contact",
+  ];
   return [
     ...staticRoutes.map((path) => ({
       url: `${site.url}${path}`,

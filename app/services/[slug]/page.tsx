@@ -73,6 +73,38 @@ export default async function ServicePage(props: Props) {
             </Stagger>
           </div>
         </div>
+
+        {service.slug === "training-enablement" ? (
+          <Reveal>
+            <Link
+              href="/courses"
+              className="card group mt-12 flex flex-col gap-4 p-7 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+            >
+              <div className="flex items-center gap-4">
+                <span className="lni lni-graduation-cap-1 card-icon" aria-hidden />
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-widest text-accent">
+                    Peakware Academy
+                  </p>
+                  <h3 className="mt-1 text-lg font-semibold tracking-tight">
+                    Browse the full course catalogue
+                  </h3>
+                  <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted">
+                    Project management, cloud, cybersecurity, data, AI and more
+                    — with globally recognised certifications.
+                  </p>
+                </div>
+              </div>
+              <span className="flex shrink-0 items-center gap-2 text-sm font-medium text-accent">
+                View courses
+                <span
+                  className="lni lni-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"
+                  aria-hidden
+                />
+              </span>
+            </Link>
+          </Reveal>
+        ) : null}
       </section>
 
       <section className="border-t keyline">

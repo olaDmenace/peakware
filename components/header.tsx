@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { Logo } from "@/components/logo";
 import { nav } from "@/content/site";
 
 export function Header() {
@@ -27,11 +28,11 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="font-display font-semibold tracking-tight text-lg">
-          Peakware<span className="text-accent">.</span>
+        <Link href="/" aria-label="Peakware Consulting — home">
+          <Logo />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
           {nav.slice(1).map((item) => (
             <Link
               key={item.href}

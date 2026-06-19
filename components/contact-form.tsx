@@ -104,6 +104,11 @@ export function ContactForm() {
           placeholder="A sentence or two is plenty."
         />
       </Field>
+      {state.formError ? (
+        <p className="rounded-xl border border-accent/40 bg-accent/5 px-4 py-3 text-sm text-accent">
+          {state.formError}
+        </p>
+      ) : null}
       <button
         type="submit"
         disabled={pending}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sora, Inter, Geist_Mono } from "next/font/google";
+import "lenis/dist/lenis.css";
 import "./lineicons.css";
 import "./globals.css";
 import { Providers } from "@/components/providers";
@@ -44,9 +45,9 @@ export default function RootLayout({
   return (
     <html
       lang="en-GB"
-      className={`${sora.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${sora.variable} ${inter.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-ink text-cream">
+      <body className="min-h-dvh flex flex-col bg-ink text-cream">
         <Providers>
           <Header />
           <div className="flex-1">{children}</div>

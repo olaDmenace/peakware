@@ -50,6 +50,18 @@ export default function HomePage() {
               </StaggerItem>
             ))}
           </Stagger>
+          <Reveal>
+            <p className="mt-10 text-sm leading-relaxed text-muted">
+              Building capability in-house too?{" "}
+              <Link
+                href="/courses"
+                className="text-accent underline-offset-4 hover:underline"
+              >
+                Explore Peakware Academy
+              </Link>{" "}
+              — 60+ certified courses across cloud, security, data and AI.
+            </p>
+          </Reveal>
         </div>
       </section>
 
