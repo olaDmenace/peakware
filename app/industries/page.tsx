@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Industries",
   description:
     "Financial services, healthcare, retail, professional services and scale-ups — sectors where Peakware has particular depth.",
+  alternates: { canonical: "/industries" },
 };
 
 export default function IndustriesPage() {

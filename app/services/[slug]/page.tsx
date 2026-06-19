@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import { PageHero } from "@/components/page-hero";
 import { CtaBand } from "@/components/cta-band";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
+import { JsonLd } from "@/components/json-ld";
 import { getService, services } from "@/content/services";
+import { site } from "@/content/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -16,7 +18,16 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const { slug } = await props.params;
   const service = getService(slug);
   if (!service) return {};
-  return { title: service.name, description: service.tagline };
+  return {
+    title: service.name,
+    description: service.tagline,
+    alternates: { canonical: `/services/${service.slug}` },
+    openGraph: {
+      title: `${service.name} — Peakware Consulting`,
+      description: service.tagline,
+      url: `/services/${service.slug}`,
+    },
+  };
 }
 
 export default async function ServicePage(props: Props) {
@@ -28,8 +39,24 @@ export default async function ServicePage(props: Props) {
   const prev = services[(index + services.length - 1) % services.length];
   const next = services[(index + 1) % services.length];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.name,
+    serviceType: service.name,
+    description: service.tagline,
+    url: `${site.url}/services/${service.slug}`,
+    areaServed: "GB",
+    provider: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+    },
+  };
+
   return (
     <main>
+      <JsonLd data={serviceSchema} />
       <PageHero
         eyebrow={`Service ${service.number} / 08`}
         title={service.name}

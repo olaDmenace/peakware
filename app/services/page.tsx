@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Eight service pillars: cloud & data, infrastructure, agentic AI, machine learning, custom software, cybersecurity, analytics and training.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

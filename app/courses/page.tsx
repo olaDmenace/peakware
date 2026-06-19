@@ -4,6 +4,8 @@ import { PageHero } from "@/components/page-hero";
 import { CtaBand } from "@/components/cta-band";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
+import { JsonLd } from "@/components/json-ld";
+import { site } from "@/content/site";
 import {
   academy,
   vision,
@@ -17,13 +19,42 @@ export const metadata: Metadata = {
   title: "Courses",
   description:
     "Peakware Academy delivers employer-led training across project management, cloud, cybersecurity, data, AI, business analysis and more — with globally recognised certifications.",
+  alternates: { canonical: "/courses" },
 };
 
 export default function CoursesPage() {
   const total = totalCourseCount();
 
+  const academySchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: academy.name,
+    url: `${site.url}/courses`,
+    description: academy.intro[0],
+    parentOrganization: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+    },
+  };
+
+  const catalogueSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Peakware Academy course catalogue",
+    numberOfItems: total,
+    itemListElement: courseCategories
+      .flatMap((category) => category.courses)
+      .map((course, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: course,
+      })),
+  };
+
   return (
     <main>
+      <JsonLd data={[academySchema, catalogueSchema]} />
       <PageHero
         eyebrow="Peakware Academy"
         title="Future-ready skills, industry-recognised certifications."

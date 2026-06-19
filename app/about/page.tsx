@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Senior people, straight answers, systems built to be handed over. How Peakware Consulting works.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
