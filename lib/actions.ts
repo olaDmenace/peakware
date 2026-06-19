@@ -1,6 +1,6 @@
 "use server";
 
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 export type ContactState = {
   status: "idle" | "success" | "error";
@@ -10,13 +10,18 @@ export type ContactState = {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// SMTP transport — defaults target Zoho Mail. For Zoho EU accounts use
+// smtp.zoho.eu; for ZeptoMail use its SMTP host with user "emailapikey".
+const SMTP_HOST = process.env.SMTP_HOST ?? "smtp.zoho.com";
+const SMTP_PORT = Number(process.env.SMTP_PORT ?? 465);
+const SMTP_USER = process.env.SMTP_USER;
+const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
+
 // Where discovery-call requests are delivered.
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "info@peakwareconsulting.co.uk";
-// Must be an address on a domain verified in Resend. The resend.dev sender
-// works out of the box for testing; swap for a peakwareconsulting.co.uk
-// address once the domain is verified.
-const FROM_EMAIL =
-  process.env.CONTACT_FROM_EMAIL ?? "Peakware Website <onboarding@resend.dev>";
+// Sender must be an address the SMTP account is allowed to send as — for Zoho
+// Mail that's the mailbox itself (defaults to SMTP_USER).
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL ?? SMTP_USER ?? TO_EMAIL;
 
 function escapeHtml(value: string): string {
   return value
@@ -45,13 +50,11 @@ export async function submitContact(
     return { status: "error", errors };
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-
-  // No key configured (e.g. local dev without secrets): log and accept so the
-  // site stays functional. Set RESEND_API_KEY to enable real delivery.
-  if (!apiKey) {
+  // No SMTP credentials (e.g. local dev): log and accept so the site stays
+  // functional. Set SMTP_USER and SMTP_PASSWORD to enable real delivery.
+  if (!SMTP_USER || !SMTP_PASSWORD) {
     console.warn(
-      "[contact] RESEND_API_KEY not set — logging submission instead of emailing.",
+      "[contact] SMTP not configured — logging submission instead of emailing.",
       { name, email, company, message }
     );
     return { status: "success", errors: {} };
@@ -82,8 +85,14 @@ export async function submitContact(
   `;
 
   try {
-    const resend = new Resend(apiKey);
-    const { error } = await resend.emails.send({
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: SMTP_PORT,
+      secure: SMTP_PORT === 465, // SSL on 465, STARTTLS otherwise
+      auth: { user: SMTP_USER, pass: SMTP_PASSWORD },
+    });
+
+    await transporter.sendMail({
       from: FROM_EMAIL,
       to: TO_EMAIL,
       replyTo: email,
@@ -91,18 +100,8 @@ export async function submitContact(
       text,
       html,
     });
-
-    if (error) {
-      console.error("[contact] Resend error", error);
-      return {
-        status: "error",
-        errors: {},
-        formError:
-          "Something went wrong sending your message. Please email us directly at info@peakwareconsulting.co.uk.",
-      };
-    }
   } catch (err) {
-    console.error("[contact] unexpected send failure", err);
+    console.error("[contact] SMTP send failure", err);
     return {
       status: "error",
       errors: {},

@@ -9,7 +9,7 @@ Academy training arm.
 - **Next.js 16** (App Router) + **React 19**
 - **Tailwind CSS v4** (CSS-first tokens in `app/globals.css`)
 - **Motion** (animations) + **Lenis** (smooth scrolling)
-- **Resend** (contact-form email)
+- **Nodemailer** SMTP (contact-form email — configured for Zoho Mail)
 - Fonts via `next/font`: Sora (headings), Inter (body), Geist Mono (labels)
 - Icons: self-hosted Lineicons (`app/lineicons.css`)
 
@@ -49,8 +49,8 @@ Most text changes are edits to the files in `content/` — no component changes 
 
 ## Environment variables
 
-The contact form emails submissions via [Resend](https://resend.com). Copy the
-example file and fill in your values:
+The contact form emails submissions over SMTP via Nodemailer, configured for
+Zoho Mail. Copy the example file and fill in your values:
 
 ```bash
 cp .env.example .env.local
@@ -58,12 +58,22 @@ cp .env.example .env.local
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `RESEND_API_KEY` | for live email | API key from the Resend dashboard |
+| `SMTP_HOST` | optional | `smtp.zoho.com` (default), or `smtp.zoho.eu` for Zoho EU accounts |
+| `SMTP_PORT` | optional | `465` (SSL, default) or `587` (STARTTLS) |
+| `SMTP_USER` | for live email | Zoho mailbox address (e.g. `info@peakwareconsulting.co.uk`) |
+| `SMTP_PASSWORD` | for live email | A Zoho **app-specific password** (Settings → Security → App Passwords) |
 | `CONTACT_TO_EMAIL` | optional | Inbox for requests (default `info@peakwareconsulting.co.uk`) |
-| `CONTACT_FROM_EMAIL` | optional | Verified sender; use a `@peakwareconsulting.co.uk` address once the domain is verified in Resend |
+| `CONTACT_FROM_EMAIL` | optional | Sender; for Zoho Mail must be the authenticated mailbox (defaults to `SMTP_USER`) |
+
+**Zoho Mail setup:** in Zoho Mail, generate an app-specific password (required
+when 2FA is on), then set `SMTP_USER` to your mailbox and `SMTP_PASSWORD` to that
+app password. The visitor's address is set as `Reply-To`, so you can reply
+straight from the notification. To use **ZeptoMail** (Zoho's transactional
+relay) instead, point `SMTP_HOST` at its relay, set `SMTP_USER=emailapikey` and
+`SMTP_PASSWORD` to the ZeptoMail SMTP token.
 
 These are **server-only** secrets (read at request time) — they are never sent
-to the browser and are **not** baked into the build. If `RESEND_API_KEY` is
+to the browser and are **not** baked into the build. If SMTP credentials are
 absent, the form still works: submissions are logged server-side instead of
 emailed, so missing config never breaks the site.
 
