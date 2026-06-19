@@ -8,8 +8,8 @@ export function Footer() {
     <footer className="border-t keyline bg-surface">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
         <div>
-          <Logo />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
+          <Logo className="h-20" />
+          <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
             {site.oneLiner}
           </p>
         </div>

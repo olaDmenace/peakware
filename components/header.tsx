@@ -29,7 +29,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link href="/" aria-label="Peakware Consulting — home">
-          <Logo />
+          <Logo className="h-12 sm:h-14" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
